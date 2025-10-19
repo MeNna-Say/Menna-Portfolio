@@ -3,10 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Menna | Portfolio</title>
-  
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  
   <style>
     * {
       margin: 0;
@@ -25,7 +22,10 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 80px;
-      background-color: #0f0f0f;
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
@@ -94,26 +94,139 @@
       margin-left: 50px;
       margin-top: -30px;
     }
+
+    /* About Section */
+    #about {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #1a1a1a;
+    }
+
+    #about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #ccc;
+    }
+
+    /* Projects Section */
+    #projects {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    #projects h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .project {
+      margin-bottom: 30px;
+    }
+
+    .project h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project a {
+      color: #ff0066;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #1a1a1a;
+    }
+
+    #contact h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    #contact input, #contact textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    #contact button {
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff0066;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #contact button:hover {
+      background-color: #cc0052;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #111;
+      color: #ccc;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+      }
+
+      .hero-image img {
+        margin-left: 0;
+        margin-top: 30px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="logo">Menna</div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
     <div class="hero-text">
-      <h2></h2>
+      <h2>Welcome!</h2>
       <h1>Hi, I am <span class="highlight">Menna</span></h1>
       <h3>Computer Science & Statistics Student | Data Analyst</h3>
     </div>
@@ -122,6 +235,42 @@
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Menna, a passionate Computer Science & Statistics student aspiring to become a Data Analyst. I enjoy coding, learning new skills, and building projects that make an impact.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>A small web app built using HTML, CSS, and JavaScript.</p>
+      <a href="https://github.com/menna/project1" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project">
+      <h3>Project 2</h3>
+      <p>Data analysis project using Python and Pandas.</p>
+      <a href="https://github.com/menna/project2" target="_blank">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Menna. All rights reserved.
+  </footer>
+
 </body>
 </html>
-
