@@ -1,21 +1,26 @@
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #111;
-  color: #fff;
+  background-color: #111; /* خلفية سوداء */
+  color: #fff;           /* نصوص بيضاء */
 }
 
-.navbar {
+/* Navbar */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
   background-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -24,28 +29,30 @@ body {
   color: #fff;
 }
 
-.nav-links {
+nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
 }
 
-.nav-links a {
-  color: #fff;
+nav a {
+  color: #eee; /* أبيض فاتح */
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: #ff147b;
+nav a:hover {
+  color: #bbb; /* رمادي فاتح عند hover */
 }
 
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 100px 80px;
+  flex-wrap: wrap;
 }
 
 .hero-text {
@@ -53,7 +60,7 @@ body {
 }
 
 .hero-text .small-title {
-  color: #ccc;
+  color: #bbb; /* رمادي */
   font-size: 14px;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -65,7 +72,7 @@ body {
 }
 
 .hero-text span {
-  color: #ff147b; 
+  color: #eee; /* النص المميز */
 }
 
 .hero-text h3 {
@@ -80,3 +87,21 @@ body {
   border-radius: 20px;
 }
 
+/* About Section */
+#about {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #111; /* خلفية سوداء */
+}
+
+#about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  colo
